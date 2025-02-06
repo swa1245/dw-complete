@@ -78,7 +78,7 @@ const Services = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2m5-5h.01M5 12a2 2 0 00-2 2v1a2 2 0 00 2 2h1a2 2 0 00 2-2v-1a2 2 0 00-2-2H5z"
           />
         </svg>
       ),
@@ -261,7 +261,7 @@ const Services = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4 text-gradient"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Rajdhani'] tracking-wider text-white mb-4 text-gradient"
             data-aos="fade-down"
           >
             Our Services
@@ -280,7 +280,7 @@ const Services = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-dark-800 font-['Cormorant''] tracking-wider text-gradient"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-dark-800 font-['Rajdhani'] tracking-wider text-gradient"
             data-aos="fade-down"
           >
             What We Offer
@@ -317,9 +317,9 @@ const Services = () => {
             </p>
             <Link
               to="/contact"
-              className="cta-button"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-blue-500 hover:bg-blue-600 transition-colors duration-300"
               data-aos="fade-up"
-              data-aos-delay="200"
+              
             >
               Start Your Project
               <svg

@@ -166,7 +166,7 @@ const Contact = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Rajdhani'] tracking-wider text-white mb-4"
             data-aos="fade-down"
           >
             Get in Touch
@@ -206,7 +206,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2" data-aos="fade-left">
               <div className="bg-black p-8 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-bold font-['Cormorant'] tracking-wider text-white mb-8">Send us a Message</h2>
+                <h2 className="text-2xl font-bold font-['Rajdhani'] tracking-wider text-white mb-8">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

@@ -74,7 +74,7 @@
 
 .career-icon {
   font-size: 2rem;
-  background: linear-gradient(135deg, #e18f42, #ce9431);
+  /* background: linear-gradient(135deg, #e18f42, #ce9431); */
   padding: 1rem;
   border-radius: 16px;
   color: white;

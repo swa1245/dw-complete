@@ -57,10 +57,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-screen z-50 transition-all py-4 bg-black overflow-hidden duration-300`}
+      className={`fixed w-full z-50 transition-all py-2 sm:py-3 lg:py-2 bg-black ${
+        scrolled ? 'shadow-lg' : ''
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo - Left aligned */}
           <div className="flex-shrink-0 relative">
             <Link 
@@ -70,24 +72,24 @@ const Navbar = () => {
               <img 
                 src="/images/Logo.png"
                 alt="DW Innovation Logo" 
-                className="h-20 w-16 sm:h-28 sm:w-24 absolute -top-12 sm:-top-16 left-0 sm:left-20 z-10" 
+                className="h-16 w-12 sm:h-20 sm:w-16 lg:h-24 lg:w-20 object-contain" 
               />
-              <span className="text-lg sm:text-xl font-bold text-orange-500 pl-20 sm:pl-0 hidden sm:block">
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-orange-500 pl-2 sm:pl-4">
                 DW Innovation Pvt.Ltd.
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation - Right aligned */}
-          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
+          <div className="hidden ml-10 lg:flex items-center space-x-1 xl:space-x-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`nav-text px-4 py-2.5 rounded-xl font-medium text-base transition-all duration-300 ${
+                className={`px-3 py-2 text-sm xl:text-base font-medium rounded-lg transition-colors duration-300 ${
                   isActivePath(item.path)
-                    ? 'text-primary-400 bg-primary-400/10'
-                    : 'text-dark-100 hover:text-primary-400 hover:bg-primary-400/5'
+                    ? 'text-orange-500 bg-orange-500/10'
+                    : 'text-gray-300 hover:text-orange-500 hover:bg-orange-500/5'
                 }`}
               >
                 {item.name}
@@ -97,13 +99,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/admin/dashboard"
-                  className="nav-text px-4 py-2.5 rounded-xl font-medium text-base transition-all duration-300 text-dark-100 hover:text-primary-400 hover:bg-primary-400/5"
+                  className="px-3 py-2 text-sm xl:text-base font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
                 >
-                 Dashboard
+                  Dashboard
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="nav-text px-4 py-2.5 rounded-xl font-medium text-base transition-all duration-300 text-dark-100 hover:text-primary-400 hover:bg-primary-400/5"
+                  className="px-3 py-2 text-sm xl:text-base font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
                 >
                   Logout
                 </button>
@@ -111,16 +113,16 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/admin/login"
-                className="nav-text px-4 flex-shrink-0 rounded-xl font-medium text-base transition-all duration-300 text-dark-100 hover:text-primary-400 hover:bg-primary-400/5"
+                className="px-3 py-2 text-sm xl:text-base sm:text-sm font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
               >
-                Admin Login
+                 Login
               </Link>
             )}
           </div>
 
-          {/* Mobile Menu Button - Right aligned */}
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-xl text-dark-100 hover:text-primary-400 hover:bg-primary-400/5 focus:outline-none"
+            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -129,50 +131,60 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden mt-4 absolute left-0 right-0 px-4 pb-4">
-            <div className="bg-black/95 backdrop-blur-sm rounded-2xl p-3 space-y-1 shadow-xl border border-gray-800">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="nav-text block transition-colors duration-300 px-4 py-2.5 rounded-xl text-dark-100 hover:bg-dark-800/50 hover:text-primary-400"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              {isAdmin ? (
-                <>
+        <div
+          className={`lg:hidden fixed inset-x-0 top-[64px] sm:top-[80px] transition-all duration-300 transform ${
+            isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
+          }`}
+        >
+          <div className="bg-black shadow-lg border-t border-gray-800">
+            <div className="max-w-7xl mx-auto px-4 py-3">
+              <div className="flex flex-col space-y-1">
+                {navItems.map((item) => (
                   <Link
-                    to="/admin/dashboard"
-                    className="nav-text block transition-colors duration-300 px-4 py-2.5 rounded-xl text-dark-100 hover:bg-dark-800/50 hover:text-primary-400"
+                    key={item.name}
+                    to={item.path}
+                    className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors duration-300 ${
+                      isActivePath(item.path)
+                        ? 'text-orange-500 bg-orange-500/10'
+                        : 'text-gray-300 hover:text-orange-500 hover:bg-orange-500/5'
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    Admin Dashboard
+                    {item.name}
                   </Link>
-                  <button
-                    onClick={() => {
-                      handleLogout();
-                      setIsOpen(false);
-                    }}
-                    className="nav-text block w-full text-left transition-colors duration-300 px-4 py-2.5 rounded-xl text-dark-100 hover:bg-dark-800/50 hover:text-primary-400"
+                ))}
+                {isAdmin ? (
+                  <>
+                    <Link
+                      to="/admin/dashboard"
+                      className="px-4 py-3 text-sm font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => {
+                        handleLogout();
+                        setIsOpen(false);
+                      }}
+                      className="px-4 py-3 text-left text-sm font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/admin/login"
+                    className="px-4 py-3 text-sm font-medium rounded-lg text-gray-300 hover:text-orange-500 hover:bg-orange-500/5 transition-colors duration-300"
+                    onClick={() => setIsOpen(false)}
                   >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <Link
-                  to="/admin/login"
-                  className="nav-text block transition-colors duration-300 px-4 py-2.5 rounded-xl text-dark-100 hover:bg-dark-800/50 hover:text-primary-400"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Admin Login
-                </Link>
-              )}
+                    Admin Login
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

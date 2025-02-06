@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Orbitron:wght@600;700;800&family=Montserrat:wght@500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
 
 :root {
   font-family: 'Poppins', system-ui, sans-serif;
@@ -23,7 +23,7 @@
 /* Global heading styles */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', serif;
   font-weight: 600;
 }
 

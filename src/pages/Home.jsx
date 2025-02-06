@@ -101,15 +101,15 @@ const Home = () => {
       image: "https://images.unsplash.com/photo-1547658719-da2b51169166",
       link: "/services/web-development",
       features: [
-        "Custom Web Applications",
+        "Custom Website",
         "E-commerce Solutions",
         "Progressive Web Apps",
       ],
     },
     {
-      title: "Mobile App Development",
+      title: "App Development",
       description:
-        "Build powerful mobile applications that connect with your users on any device.",
+        "Build powerful mobile applications that connect with your users device.",
       icon: "📱",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
       link: "/services/MobileAppDevelopment",
@@ -148,13 +148,13 @@ const Home = () => {
     {
       title: "Software Maintenance",
       description:
-        "Keep your software running smoothly with our comprehensive maintenance services.",
+        "Keep your software running smoothly with our maintenance services.",
       icon: "🛠️",
       // path: '/services/software-maintenance',
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
       link: "/services/software-maintenance",
       features: [
-        "Performance Optimization",
+        "Optimization",
         "Security Updates",
         "24/7 Support",
       ],
@@ -297,7 +297,7 @@ const Home = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-dark-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Rajdhani'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
             data-aos="fade-down"
           >
             Our Development Process
@@ -336,7 +336,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-8 sm:mb-12 lg:mb-16"
           >
-            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold font-['Cormorant'] tracking-wider  mb-4 sm:mb-6 bg-gradient-to-r from-dark-800 to-dark-900 text-transparent bg-clip-text">
+            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold font-['Rajdhani'] tracking-wider  mb-4 sm:mb-6 bg-gradient-to-r from-dark-800 to-dark-900 text-transparent bg-clip-text">
               Our Services
             </h2>
             <p className="text-dark-900 text-base sm:text-lg max-w-3xl mx-auto px-4">
@@ -449,7 +449,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="cta-section py-20 ">
-          
+
         <div className="container mx-auto px-4">
           <div className="cta-content text-center">
             <h2 className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6" data-aos="fade-down">
@@ -464,7 +464,7 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="cta-button"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-blue-500 hover:bg-blue-600 transition-colors duration-300"
               data-aos="fade-up"
               data-aos-delay="200"
             >

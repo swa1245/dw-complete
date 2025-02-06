@@ -164,7 +164,7 @@ const Blog = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Rajdhani'] tracking-wider text-white mb-4"
             data-aos="fade-down"
           >
             Insights & Innovation
@@ -336,9 +336,8 @@ const Blog = () => {
             </p>
             <Link
               to="/contact"
-              className="cta-button"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-blue-500 hover:bg-blue-600 transition-colors duration-300"
               data-aos="fade-up"
-              data-aos-delay="200"
             >
               Start Your Project
               <svg

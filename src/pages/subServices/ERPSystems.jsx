@@ -265,9 +265,9 @@ const ERPSystems = () => {
             </p>
             <Link
               to="/contact"
-              className="cta-button"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-blue-500 hover:bg-blue-600 transition-colors duration-300"
               data-aos="fade-up"
-              data-aos-delay="200"
+              
             >
               Start Your Project
               <svg

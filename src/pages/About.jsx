@@ -140,7 +140,7 @@ const About = () => {
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <h1
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-['Cormorant'] tracking-wider mb-4 sm:mb-6 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-['Rajdhani'] tracking-wider mb-4 sm:mb-6 text-white"
             data-aos="zoom-in"
             data-aos-duration="1200"
           >
@@ -184,7 +184,7 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-dark-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Rajdhani'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
             data-aos="fade-down"
           >
             Our Core Values
@@ -206,7 +206,7 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-dark-900"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Rajdhani'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-dark-900"
             data-aos="fade-down"
           >
             Our Journey
@@ -270,9 +270,9 @@ const About = () => {
             </p>
             <Link
               to="/contact"
-              className="cta-button"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-blue-500 hover:bg-blue-600 transition-colors duration-300"
               data-aos="fade-up"
-              data-aos-delay="200"
+              
             >
               Start Your Project
               <svg

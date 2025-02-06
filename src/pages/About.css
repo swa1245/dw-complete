@@ -263,7 +263,7 @@
 .journey-title {
   position: relative;
   display: inline-block;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', serif;
   font-weight: 600;
 }
 
@@ -449,17 +449,17 @@
 
 /* Section Headings */
 .section-heading {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
 }
 
 .about-title {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
 }
 
 .values-title {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
 }
 

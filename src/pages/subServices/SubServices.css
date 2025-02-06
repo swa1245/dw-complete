@@ -22,7 +22,7 @@
 .hero-title {
   font-size: 4rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   color: white;
   opacity: 0;
   transform: translateY(20px);
@@ -323,7 +323,7 @@
 }
 
 .section-title {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }

@@ -2,6 +2,7 @@
 .hero-section {
   position: relative;
   height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   background-color: #111827;
 }
@@ -39,27 +40,33 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   background: linear-gradient(135deg, #60A5FA, #3B82F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  padding: 0 1rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
 }
 
 .hero-description {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #E5E7EB;
-  max-width: 36rem;
-  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  line-height: 1.5;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards 0.2s;
@@ -75,6 +82,70 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Query for 1024x600 and similar resolutions */
+@media (min-width: 1024px) and (max-height: 600px) {
+  .hero-section {
+    height: 600px;
+  }
+  
+  .hero-content {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    max-width: 28rem;
+  }
+}
+
+/* Media Query for tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: 550px;
+  }
+
+  .hero-content {
+    padding-top: 5rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 640px) {
+  .hero-section {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -232,7 +303,7 @@
 .feature-title {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -279,7 +350,7 @@
 .stat-title {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -325,7 +396,7 @@
 .process-title {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -360,7 +431,7 @@
 .tech-title {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -410,7 +481,7 @@
 .cta-title {
   font-size: 2rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -496,7 +567,7 @@
 .service-title {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #fff, #e2e8f0);
   -webkit-background-clip: text;
@@ -578,7 +649,7 @@
 }
 
 .service-title {
-  font-family: 'Cormorant', serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
