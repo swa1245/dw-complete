@@ -21,14 +21,16 @@ const AdminDashboard = () => {
         return;
       }
 
-      const response = await fetch('/api/admin/applications', {
+      const response = await fetch('https://dwi4u.onrender.com/api/admin/applications', {
         headers: {
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/json'
         }
       });
 
       if (!response.ok) {
-        throw new Error('Failed to fetch applications');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to fetch applications');
       }
 
       const data = await response.json();
@@ -43,24 +45,28 @@ const AdminDashboard = () => {
   const handleDownloadResume = async (id) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/admin/applications/${id}/resume`, {
+      const response = await fetch(`https://dwi4u.onrender.com/api/admin/applications/${id}/resume`, {
         headers: {
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/octet-stream'
         }
       });
 
       if (!response.ok) {
-        throw new Error('Failed to download resume');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || 'Failed to download resume');
       }
 
+      // Handle file download
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `resume_${id}.pdf`;
+      a.download = `resume-${id}.pdf`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
     } catch (error) {
       setError(error.message);
     }
@@ -69,25 +75,23 @@ const AdminDashboard = () => {
   const handleStatusUpdate = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/admin/applications/${id}`, {
+      const response = await fetch(`https://dwi4u.onrender.com/api/admin/applications/${id}`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({ status: newStatus })
       });
 
       if (!response.ok) {
-        throw new Error('Failed to update status');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to update status');
       }
 
-      // Update local state
-      setApplications(apps =>
-        apps.map(app =>
-          app._id === id ? { ...app, status: newStatus } : app
-        )
-      );
+      // Refresh applications after status update
+      await fetchApplications();
     } catch (error) {
       setError(error.message);
     }

@@ -60,6 +60,7 @@ const SoftwareDevelopment = () => {
     { number: "10+", label: "Years of Experience" },
     { number: "50+", label: "Successful Projects" },
     { number: "100+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
   ];
 
   const methodologies = [
@@ -102,7 +103,7 @@ const SoftwareDevelopment = () => {
   ];
 
   return (
-    <div className="bg-white w-screen w-screen min-h-screen">
+    <div className=" bg-gray-300 w-screen  min-h-screen">
       {/* Hero Section */}
       <motion.div
         className="h-[60vh] relative flex items-center justify-center overflow-hidden"
@@ -140,7 +141,7 @@ const SoftwareDevelopment = () => {
       <section className="py-20">
         <div className="container mx-auto w-full">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-black font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Our Services
@@ -168,7 +169,7 @@ const SoftwareDevelopment = () => {
                         className="flex items-center text-gray-300"
                       >
                         <svg
-                          className="w-5 h-5 text-blue-500 mr-2"
+                          className="w-5 h-5 text-orange-500 mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -195,7 +196,7 @@ const SoftwareDevelopment = () => {
       <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-white font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Our Development Process
@@ -223,7 +224,7 @@ const SoftwareDevelopment = () => {
                         className="flex items-center text-gray-300"
                       >
                         <svg
-                          className="w-5 h-5 text-blue-500 mr-2"
+                          className="w-5 h-5 text-orange-500 mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -245,61 +246,27 @@ const SoftwareDevelopment = () => {
           </div>
         </div>
       </section>
-       {/* Stats Section */}
-       <section className="py-20 bg-black-800">
-        <div className="container mx-auto px-4">
-          <div className="stats-grid">
+     
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-300 -mt-1">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="stat-card bg-black"
+                className="stat-card p-6 sm:p-8 text-center transform hover:scale-105 transition-transform duration-300 bg-dark-900"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="stat-number">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white text-sm sm:text-base">
+                  {stat.label}
+                </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section py-20">
-        <div className="container mx-auto px-4">
-          <div className="cta-content text-center">
-            <h2 className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6" data-aos="fade-down">
-              Ready to Transform Your Business?
-            </h2>
-            <p
-              className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Let's work together to bring your vision to life with our
-              innovative solutions.
-            </p>
-            <Link
-              to="/contact"
-              className="cta-button"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Start Your Project
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>

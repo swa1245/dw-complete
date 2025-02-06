@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './SubServices.css';
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./SubServices.css";
 
 const SoftwareMaintenance = () => {
   useEffect(() => {
@@ -16,40 +16,44 @@ const SoftwareMaintenance = () => {
 
   const services = [
     {
-      title: 'Preventive Maintenance',
-      description: 'Regular system checks and updates to prevent issues before they occur.',
-      icon: '🛡️',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070',
+      title: "Preventive Maintenance",
+      description:
+        "Regular system checks and updates to prevent issues before they occur.",
+      icon: "🛡️",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       features: [
-        'Performance monitoring',
-        'Security updates',
-        'Code optimization',
-        'Database maintenance'
-      ]
+        "Performance monitoring",
+        "Security updates",
+        "Code optimization",
+        "Database maintenance",
+      ],
     },
     {
-      title: 'Corrective Maintenance',
-      description: 'Quick resolution of software issues and bug fixes.',
-      icon: '🔧',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069',
+      title: "Corrective Maintenance",
+      description: "Quick resolution of software issues and bug fixes.",
+      icon: "🔧",
+      image:
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069",
       features: [
-        'Bug fixing',
-        'Error handling',
-        'System recovery',
-        'Performance tuning'
-      ]
+        "Bug fixing",
+        "Error handling",
+        "System recovery",
+        "Performance tuning",
+      ],
     },
     {
-      title: 'Adaptive Maintenance',
-      description: 'Keeping software up-to-date with changing business needs.',
-      icon: '🔄',
-      image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1974',
+      title: "Adaptive Maintenance",
+      description: "Keeping software up-to-date with changing business needs.",
+      icon: "🔄",
+      image:
+        "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1974",
       features: [
-        'Feature updates',
-        'Platform upgrades',
-        'Integration updates',
-        'Compatibility maintenance'
-      ]
+        "Feature updates",
+        "Platform upgrades",
+        "Integration updates",
+        "Compatibility maintenance",
+      ],
     },
     // {
     //   title: '24/7 Support',
@@ -67,51 +71,60 @@ const SoftwareMaintenance = () => {
 
   const features = [
     {
-      title: 'Proactive Monitoring',
-      description: 'Continuous system monitoring to identify and prevent issues',
-      icon: '📊',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070'
+      title: "Proactive Monitoring",
+      description:
+        "Continuous system monitoring to identify and prevent issues",
+      icon: "📊",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
     },
     {
-      title: 'Regular Backups',
-      description: 'Automated backup systems with secure data storage',
-      icon: '💾',
-      image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070'
+      title: "Regular Backups",
+      description: "Automated backup systems with secure data storage",
+      icon: "💾",
+      image:
+        "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070",
     },
     {
-      title: 'Security Updates',
-      description: 'Regular security patches and vulnerability assessments',
-      icon: '🔒',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070'
+      title: "Security Updates",
+      description: "Regular security patches and vulnerability assessments",
+      icon: "🔒",
+      image:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070",
     },
     {
-      title: 'Performance Optimization',
-      description: 'Continuous performance monitoring and optimization',
-      icon: '⚡',
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070'
-    }
+      title: "Performance Optimization",
+      description: "Continuous performance monitoring and optimization",
+      icon: "⚡",
+      image:
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070",
+    },
   ];
 
   const tools = [
-    { name: 'Monitoring', icon: '📈' },
-    { name: 'Issue Tracking', icon: '🎯' },
-    { name: 'Version Control', icon: '📚' },
-    { name: 'CI/CD', icon: '🔄' },
-    { name: 'Testing', icon: '✅' },
-    { name: 'Documentation', icon: '📝' }
+    { name: "Monitoring", icon: "📈" },
+    { name: "Issue Tracking", icon: "🎯" },
+    { name: "Version Control", icon: "📚" },
+    { name: "CI/CD", icon: "🔄" },
+    { name: "Testing", icon: "✅" },
+    { name: "Documentation", icon: "📝" },
   ];
 
   const stats = [
     { number: "10+", label: "Years of Experience" },
     { number: "50+", label: "Successful Projects" },
     { number: "100+", label: "Happy Clients" },
+
+    { number: "5+", label: "Years Experience" },
   ];
 
-  const heroImage = 'https://img.freepik.com/free-photo/programming-background-concept_23-2150170128.jpg?ga=GA1.1.402563534.1736440284&semt=ais_incoming';
-  const description = 'Comprehensive software maintenance services to keep your systems running smoothly and efficiently.';
+  const heroImage =
+    "https://img.freepik.com/free-photo/programming-background-concept_23-2150170128.jpg?ga=GA1.1.402563534.1736440284&semt=ais_incoming";
+  const description =
+    "Comprehensive software maintenance services to keep your systems running smoothly and efficiently.";
 
   return (
-    <div className="bg-white w-screen w-screen min-h-screen">
+    <div className="bg-gray-300  w-screen min-h-screen">
       {/* Hero Section */}
       <motion.div
         className="h-[60vh] relative flex items-center justify-center overflow-hidden"
@@ -149,7 +162,7 @@ const SoftwareMaintenance = () => {
       <section className="py-20">
         <div className="container mx-auto w-full">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-black font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Core Features
@@ -171,13 +184,11 @@ const SoftwareMaintenance = () => {
         </div>
       </section>
 
-      
-
       {/* Solutions Section */}
       <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-white font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Our Solutions
@@ -205,7 +216,7 @@ const SoftwareMaintenance = () => {
                         className="flex items-center text-gray-300"
                       >
                         <svg
-                          className="w-5 h-5 text-blue-500 mr-2"
+                          className="w-5 h-5 text-orange-500 mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -227,19 +238,23 @@ const SoftwareMaintenance = () => {
           </div>
         </div>
       </section>
-       {/* Stats Section */}
-       <section className="py-20 bg-black-800">
-        <div className="container mx-auto px-4">
-          <div className="stats-grid">
+      {/* Stats Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-300 -mt-1">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="stat-card bg-black"
+                className="stat-card p-6 sm:p-8 text-center transform hover:scale-105 transition-transform duration-300 bg-dark-900"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="stat-number">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white text-sm sm:text-base">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -250,7 +265,10 @@ const SoftwareMaintenance = () => {
       <section className="cta-section py-20">
         <div className="container mx-auto px-4">
           <div className="cta-content text-center">
-            <h2 className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6" data-aos="fade-down">
+            <h2
+              className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6"
+              data-aos="fade-down"
+            >
               Ready to Transform Your Business?
             </h2>
             <p
@@ -258,8 +276,8 @@ const SoftwareMaintenance = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Let's work together to bring your vision to life with our
-              reliable software maintenance services.
+              Let's work together to bring your vision to life with our reliable
+              software maintenance services.
             </p>
             <Link
               to="/contact"

@@ -21,7 +21,7 @@ const ItInfrac = () => {
         "Custom network architecture optimized for performance and security.",
       icon: (
         <svg
-          className="w-12 h-12 text-blue-500 mb-4"
+          className="w-12 h-12 text-orange-500 mb-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ const ItInfrac = () => {
         "Scalable cloud infrastructure with optimal resource utilization.",
       icon: (
         <svg
-          className="w-12 h-12 text-blue-500 mb-4"
+          className="w-12 h-12 text-orange-500 mb-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -60,7 +60,7 @@ const ItInfrac = () => {
       description: "Advanced security measures to protect your digital assets.",
       icon: (
         <svg
-          className="w-12 h-12 text-blue-500 mb-4"
+          className="w-12 h-12 text-orange-500 mb-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ const ItInfrac = () => {
       description: "24/7 infrastructure monitoring and proactive maintenance.",
       icon: (
         <svg
-          className="w-12 h-12 text-blue-500 mb-4"
+          className="w-12 h-12 text-orange-500 mb-4"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -169,7 +169,7 @@ const ItInfrac = () => {
   ];
 
   return (
-    <div className="bg-white w-screen w-screen min-h-screen">
+    <div className="bg-gray-300  w-screen min-h-screen">
       {/* Hero Section */}
       {/* <section className="subservice-hero text-center relative flex items-center justify-center">
         <div className="hero-pattern"></div>
@@ -250,7 +250,7 @@ const ItInfrac = () => {
       <section className="py-20  ">
         <div className="container  mx-auto w-full">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-black font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Core Features
@@ -276,7 +276,7 @@ const ItInfrac = () => {
       <section className="py-20 bg-dark-900 ">
         <div className="container mx-auto px-4">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-white font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Our Solutions
@@ -304,7 +304,7 @@ const ItInfrac = () => {
                         className="flex items-center  text-gray-300"
                       >
                         <svg
-                          className="w-5 h-5 text-blue-500  mr-2"
+                          className="w-5 h-5 text-orange-500  mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -357,18 +357,22 @@ const ItInfrac = () => {
       </section> */}
 
       {/* Stats Section */}
-      <section className="py-20 bg-black-800">
-        <div className="container mx-auto px-4">
-          <div className="stats-grid">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-300 -mt-1">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="stat-card bg-black"
+                className="stat-card p-6 sm:p-8 text-center transform hover:scale-105 transition-transform duration-300 bg-dark-900"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="stat-number">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white text-sm sm:text-base">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>

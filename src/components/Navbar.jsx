@@ -55,15 +55,12 @@ const Navbar = () => {
     navigate('/');
   };
 
-  // ${
-  //   scrolled ? 'bg-black backdrop-blur-sm py-4' : 'bg-transparent py-6'
-  // }
   return (
     <nav
-      className={`fixed w-screen z-50 transition-all py-4 bg-black overflow-hidden duration-300 `}
+      className={`fixed w-screen z-50 transition-all py-4 bg-black overflow-hidden duration-300`}
     >
-      <div className="max-w-7xl  mx-auto ">
-        <div className="flex gap-64 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
           {/* Logo - Left aligned */}
           <div className="flex-shrink-0 relative">
             <Link 
@@ -73,16 +70,16 @@ const Navbar = () => {
               <img 
                 src="/images/Logo.png"
                 alt="DW Innovation Logo" 
-                className="h-28 w-24 absolute -top-16 left-20 z-10" 
+                className="h-20 w-16 sm:h-28 sm:w-24 absolute -top-12 sm:-top-16 left-0 sm:left-20 z-10" 
               />
-              <span className="text-xl font-bold text-orange-500 hidden sm:block">
+              <span className="text-lg sm:text-xl font-bold text-orange-500 pl-20 sm:pl-0 hidden sm:block">
                 DW Innovation Pvt.Ltd.
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation - Right aligned */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -123,17 +120,18 @@ const Navbar = () => {
 
           {/* Mobile Menu Button - Right aligned */}
           <button
-            className="lg:hidden p-2 rounded-xl text-dark-100 hover:text-primary-400 hover:bg-primary-400/5"
+            className="lg:hidden p-2 rounded-xl text-dark-100 hover:text-primary-400 hover:bg-primary-400/5 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            {isOpen ? <FaTimes /> : <FaBars />}
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4">
-            <div className="bg-dark-800/90 backdrop-blur-sm rounded-2xl p-3 space-y-1 shadow-xl">
+          <div className="lg:hidden mt-4 absolute left-0 right-0 px-4 pb-4">
+            <div className="bg-black/95 backdrop-blur-sm rounded-2xl p-3 space-y-1 shadow-xl border border-gray-800">
               {navItems.map((item) => (
                 <Link
                   key={item.name}

@@ -69,7 +69,7 @@ const Careers = () => {
         "Database management skills",
       ],
       location: "Remote/On-site",
-      icon: "⚡",
+      "icon": "💻",
     },
     {
       title: "Sales Executive",

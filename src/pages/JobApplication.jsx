@@ -39,14 +39,17 @@ const JobApplication = () => {
         data.append(key, formData[key]);
       });
 
-      const response = await fetch('/api/job-applications', {
+      const response = await fetch('https://dwi4u.onrender.com/api/job-applications', {
         method: 'POST',
         body: data,
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit application');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to submit application');
       }
+
+      const responseData = await response.json();
 
       // Clear form and show success message
       setFormData({

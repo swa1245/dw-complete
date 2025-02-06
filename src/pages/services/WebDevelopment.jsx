@@ -18,7 +18,7 @@ const WebDevelopment = () => {
       title: 'Custom Development',
       description: 'Tailor-made websites that perfectly match your business needs.',
       icon: (
-        <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       )
@@ -27,7 +27,7 @@ const WebDevelopment = () => {
       title: 'Responsive Design',
       description: 'Websites that look and work perfectly on all devices.',
       icon: (
-        <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       )
@@ -36,7 +36,7 @@ const WebDevelopment = () => {
       title: 'E-Commerce',
       description: 'Full-featured online stores with secure payment processing.',
       icon: (
-        <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
@@ -45,7 +45,7 @@ const WebDevelopment = () => {
       title: 'SEO Optimization',
       description: 'Built-in SEO best practices for maximum visibility.',
       icon: (
-        <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       )
@@ -94,7 +94,7 @@ const WebDevelopment = () => {
     <div className="service-page">
       {/* Hero Section */}
       <section className="service-hero">
-        <div className="service-hero-content">
+        <div className="service-hero-content text-white">
           <h1 className="service-title">Web Development</h1>
           <p className="service-subtitle">
             Create stunning, responsive websites that drive results

@@ -140,7 +140,7 @@ const About = () => {
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <h1
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-['Orbitron'] tracking-wider mb-4 sm:mb-6 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-['Cormorant'] tracking-wider mb-4 sm:mb-6 text-white"
             data-aos="zoom-in"
             data-aos-duration="1200"
           >
@@ -184,7 +184,7 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-dark-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Orbitron'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
             data-aos="fade-down"
           >
             Our Core Values
@@ -206,7 +206,7 @@ const About = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Orbitron'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-orange-600"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-dark-900"
             data-aos="fade-down"
           >
             Our Journey
@@ -238,7 +238,7 @@ const About = () => {
                     index % 2 === 0 ? "sm:order-2" : "sm:order-1"
                   } text-center sm:text-left`}
                 >
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-400 mb-2">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-dark-800 mb-2">
                     {milestone.year}
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 text-dark-900">

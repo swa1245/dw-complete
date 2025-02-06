@@ -164,7 +164,7 @@ const Blog = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Orbitron'] tracking-wider text-white mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4"
             data-aos="fade-down"
           >
             Insights & Innovation
@@ -195,7 +195,7 @@ const Blog = () => {
                 className={`px-6 py-2 rounded-full capitalize ${
                   filter === category.id
                     ? "bg-primary-500 text-white"
-                    : "bg-gray-100 text-dark-900 hover:bg-primary-500/10"
+                    : "bg-blue-400 text-dark-900 "
                 }`}
               >
                 {category.label}

@@ -201,7 +201,7 @@
 
 .stat-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(96, 165, 250, 0.3);
+  border-color: rgba(250, 206, 96, 0.3);
   box-shadow: 
     0 10px 20px -10px rgba(96, 165, 250, 0.3),
     0 0 30px rgba(96, 165, 250, 0.1);
@@ -210,7 +210,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  background: linear-gradient(135deg, #faaf60, #f6923b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
@@ -263,6 +263,8 @@
 .journey-title {
   position: relative;
   display: inline-block;
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
 }
 
 .journey-title::after {
@@ -443,6 +445,22 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
+}
+
+/* Section Headings */
+.section-heading {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+}
+
+.about-title {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+}
+
+.values-title {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
 }
 
 /* Animations */

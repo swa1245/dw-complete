@@ -12,6 +12,8 @@ import Finance from '../pages/projects/Finance';
 import SmartHome from '../pages/projects/SmartHome';
 import AiContent from '../pages/projects/AiContent';
 import SupplyChain from '../pages/projects/SupplyChain';
+import AdminLogin from '../pages/AdminLogin';
+import AdminDashboard from '../pages/AdminDashboard';
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
       { path: '/projects/smarthome', element: <SmartHome /> },
       { path: '/projects/ai-content', element: <AiContent /> },
       { path: '/projects/supply-chain', element: <SupplyChain /> },
+      { path: '/admin/login', element: <AdminLogin /> },
+      { path: '/admin/dashboard', element: <AdminDashboard /> },
     ],
   },
 ]);

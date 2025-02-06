@@ -22,19 +22,21 @@ const AdminLogin = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/admin/login', {
+      const response = await fetch('https://dwi4u.onrender.com/api/admin/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(credentials)
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
+        const data = await response.json();
         throw new Error(data.message || 'Login failed');
       }
+
+      const data = await response.json();
 
       // Store admin data in localStorage
       localStorage.setItem('adminToken', data.token);

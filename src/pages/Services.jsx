@@ -261,7 +261,7 @@ const Services = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Orbitron'] tracking-wider text-white mb-4 text-gradient"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4 text-gradient"
             data-aos="fade-down"
           >
             Our Services
@@ -280,7 +280,7 @@ const Services = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-orange-500 font-['Orbitron'] tracking-wider text-gradient"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-dark-800 font-['Cormorant''] tracking-wider text-gradient"
             data-aos="fade-down"
           >
             What We Offer
@@ -305,28 +305,25 @@ const Services = () => {
       <section className="cta-section py-20">
         <div className="container mx-auto px-4">
           <div className="cta-content text-center">
-            <h2 
-              className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6 text-gradient" 
-              data-aos="fade-down"
-            >
+            <h2 className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6" data-aos="fade-down">
               Ready to Transform Your Business?
             </h2>
             <p
               className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-              data-aos="custom-fade-up"
+              data-aos="fade-up"
               data-aos-delay="100"
             >
               Let's work together to bring your vision to life with our expert IT consulting services.
             </p>
             <Link
               to="/contact"
-              className="cta-button inline-flex items-center px-8 py-3 bg-primary-500 text-white rounded-full"
-              data-aos="custom-fade-up"
+              className="cta-button"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
               Start Your Project
               <svg
-                className="w-5 h-5 ml-2"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

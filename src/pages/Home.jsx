@@ -198,7 +198,7 @@ const Home = () => {
     {
       icon: (
         <svg
-          className="w-8 h-8 text-blue-500"
+          className="w-8 h-8 text-orange-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -218,7 +218,7 @@ const Home = () => {
     {
       icon: (
         <svg
-          className="w-8 h-8 text-blue-500"
+          className="w-8 h-8 text-orange-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -237,7 +237,7 @@ const Home = () => {
     {
       icon: (
         <svg
-          className="w-8 h-8 text-blue-500"
+          className="w-8 h-8 text-orange-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -281,7 +281,7 @@ const Home = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="stat-number text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-400 mb-2">
+                <div className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-400 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-white text-sm sm:text-base">
@@ -297,7 +297,7 @@ const Home = () => {
       <section className="py-12 sm:py-16 lg:py-20 bg-dark-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Orbitron'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Cormorant'] tracking-wider text-center mb-8 sm:mb-12 lg:mb-16 text-white"
             data-aos="fade-down"
           >
             Our Development Process
@@ -336,7 +336,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-8 sm:mb-12 lg:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-['Orbitron'] tracking-wider  mb-4 sm:mb-6 bg-gradient-to-r from-primary-400 to-primary-600 text-transparent bg-clip-text">
+            <h2 className="text-4xl sm:text-4xl lg:text-5xl font-extrabold font-['Cormorant'] tracking-wider  mb-4 sm:mb-6 bg-gradient-to-r from-dark-800 to-dark-900 text-transparent bg-clip-text">
               Our Services
             </h2>
             <p className="text-dark-900 text-base sm:text-lg max-w-3xl mx-auto px-4">
@@ -345,7 +345,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -356,7 +356,7 @@ const Home = () => {
                 className="group relative h-full"
               >
                 <motion.div
-                  className="relative overflow-hidden rounded-xl bg-black backdrop-blur-sm border border-dark-700 h-full p-6 sm:p-8"
+                  className="relative overflow-hidden rounded-xl bg-black backdrop-blur-sm border border-dark-700 h-full p-4 sm:p-6 lg:p-8"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -372,28 +372,28 @@ const Home = () => {
                   </div>
                   <div className="relative z-10">
                     <motion.div
-                      className="text-3xl sm:text-4xl mb-4"
+                      className="text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4"
                       whileHover={{ rotate: 10 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       {service.icon}
                     </motion.div>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-3 text-primary-400">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 text-primary-400">
                       {service.title}
                     </h3>
-                    <p className="text-dark-200 text-sm sm:text-base mb-6">
+                    <p className="text-dark-200 text-sm sm:text-base mb-4 sm:mb-6">
                       {service.description}
                     </p>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                       {service.features.map((feature, idx) => (
                         <motion.li
                           key={idx}
-                          className="flex items-center text-sm sm:text-base text-dark-300"
+                          className="flex items-center text-xs sm:text-sm lg:text-base text-dark-300"
                           whileHover={{ x: 5 }}
                           transition={{ duration: 0.2 }}
                         >
                           <svg
-                            className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 mr-2"
+                            className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-primary-400 mr-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -401,7 +401,7 @@ const Home = () => {
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
-                              strokeWidth="2"
+                              strokeWidth={2}
                               d="M5 13l4 4L19 7"
                             />
                           </svg>
@@ -409,30 +409,12 @@ const Home = () => {
                         </motion.li>
                       ))}
                     </ul>
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
+                    <Link
+                      to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-block text-sm sm:text-base text-primary-400 hover:text-primary-500 transition-colors duration-300"
                     >
-                      <Link
-                        to={service.link}
-                        className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors duration-300 text-sm sm:text-base"
-                      >
-                        Learn More
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </Link>
-                    </motion.div>
+                      Learn More →
+                    </Link>
                   </div>
                 </motion.div>
               </motion.div>
@@ -452,7 +434,7 @@ const Home = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="feature-icon text-primary-400">
+                <div className="feature-icon ">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-white">
@@ -467,39 +449,36 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="cta-section py-20 ">
+          
         <div className="container mx-auto px-4">
           <div className="cta-content text-center">
-            <h2
-              className="text-4xl font-bold mb-6 text-white"
-              data-aos="fade-down"
-            >
+            <h2 className="text-4xl font-bold font-['Orbitron'] tracking-wider mb-6" data-aos="fade-down">
               Ready to Transform Your Business?
             </h2>
             <p
-              className="text-xl text-white mb-8 max-w-2xl mx-auto"
+              className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Let's work together to bring your vision to life with our
-              innovative solutions.
+              Let's work together to bring your vision to life with our expert IT consulting services.
             </p>
             <Link
               to="/contact"
               className="cta-button"
-              // data-aos="fade-up"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
               Start Your Project
               <svg
-                className="w-5 h-5 "
+                className="w-5 h-5"
                 fill="none"
-                // stroke="currentColor"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  // strokeWidth="2"
+                  strokeWidth="2"
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>

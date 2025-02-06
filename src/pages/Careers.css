@@ -74,7 +74,7 @@
 
 .career-icon {
   font-size: 2rem;
-  background: linear-gradient(135deg, #4299e1, #3182ce);
+  background: linear-gradient(135deg, #e18f42, #ce9431);
   padding: 1rem;
   border-radius: 16px;
   color: white;
@@ -104,7 +104,7 @@
 }
 
 .info-icon {
-  color: #4299e1;
+  color: #e1bc42;
 }
 
 .requirements {
@@ -136,7 +136,7 @@
 }
 
 .bullet {
-  color: #4299e1;
+  color: #e1b742;
   font-size: 1.2rem;
 }
 

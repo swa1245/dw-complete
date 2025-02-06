@@ -112,13 +112,14 @@ const AIMachineLearning = () => {
     { number: "10+", label: "Years of Experience" },
     { number: "50+", label: "Successful Projects" },
     { number: "100+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
   ];
 
   const heroImage = 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072';
   const description = 'Transform your business with cutting-edge artificial intelligence and machine learning solutions';
 
   return (
-    <div className="bg-white w-screen w-screen min-h-screen">
+    <div className="bg-gray-300 w-screen min-h-screen">
       {/* Hero Section */}
       <motion.div
         className="h-[60vh] relative flex items-center bg-black justify-center overflow-hidden"
@@ -156,7 +157,7 @@ const AIMachineLearning = () => {
       <section className="py-20">
         <div className="container mx-auto w-full">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-black font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Core Features
@@ -183,7 +184,7 @@ const AIMachineLearning = () => {
       <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4">
           <h2
-            className="text-4xl text-orange-500 font-bold font-['Orbitron'] tracking-wider text-center mb-16"
+            className="text-4xl text-white font-bold font-['Orbitron'] tracking-wider text-center mb-16"
             data-aos="fade-down"
           >
             Our Solutions
@@ -211,7 +212,7 @@ const AIMachineLearning = () => {
                         className="flex items-center text-gray-300"
                       >
                         <svg
-                          className="w-5 h-5 text-blue-500 mr-2"
+                          className="w-5 h-5 text-orange-500 mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -235,23 +236,7 @@ const AIMachineLearning = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-black-800">
-        <div className="container mx-auto px-4">
-          <div className="stats-grid">
-            {applications.map((stat, index) => (
-              <div
-                key={index}
-                className="stat-card bg-black"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="stat-number">{stat.sector}</div>
-                <div className="text-gray-400">{stat.use_cases.join(', ')}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
        {/* Stats Section */}
        <section className="py-20 text-center">
         <div className="container mx-auto px-4">

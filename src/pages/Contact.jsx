@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 // EmailJS credentials
 const EMAILJS_PUBLIC_KEY = "Lr9QXkZnwsu2UE8JG";
@@ -118,20 +119,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      title: 'Email',
-      info: 'info@dwi4u.com',
-      icon: '📧',
+      icon: <FaPhoneAlt className="text-orange-500 w-8 h-8" />,
+      title: "Call Us",
+      info: "+91 9028954278"
     },
     {
-      title: 'Phone',
-      info: '+91 9028954278',
-      icon: '📱',
+      icon: <FaEnvelope className="text-orange-500 w-8 h-8" />,
+      title: "Email Us",
+      info: "info@dwi4u.com"
     },
     {
-      title: 'Address',
-      info: 'Pune, Maharashtra, India',
-      icon: '📍',
+      icon: <FaMapMarkerAlt className="text-orange-500 w-8 h-8" />,
+      title: "Visit Us",
+      info: "Pune, Maharashtra, India"
     },
+    {
+      icon: <FaClock className="text-orange-500 w-8 h-8" />,
+      title: "Business Hours",
+      info: "Mon - Sat: 9:00 AM - 6:00 PM"
+    }
   ];
 
   return (
@@ -160,7 +166,7 @@ const Contact = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Orbitron'] tracking-wider text-white mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold font-['Cormorant'] tracking-wider text-white mb-4"
             data-aos="fade-down"
           >
             Get in Touch
@@ -184,11 +190,15 @@ const Contact = () => {
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-black p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-black p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <div className="text-3xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
-                  <p className="text-gray-300">{item.info}</p>
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gray-900 p-3 rounded-lg">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold ml-4 text-white">{item.title}</h3>
+                  </div>
+                  <p className="text-gray-300 pl-16">{item.info}</p>
                 </div>
               ))}
             </div>
@@ -196,7 +206,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2" data-aos="fade-left">
               <div className="bg-black p-8 rounded-xl shadow-lg">
-                <h2 className="text-2xl font-bold font-['Orbitron'] tracking-wider text-white mb-8">Send us a Message</h2>
+                <h2 className="text-2xl font-bold font-['Cormorant'] tracking-wider text-white mb-8">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -295,7 +305,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-900 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-900 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>

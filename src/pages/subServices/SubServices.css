@@ -21,13 +21,18 @@
 
 .hero-title {
   font-size: 4rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-family: 'Cormorant', serif;
+  color: white;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
+}
+
+.gradient-text {
+  color: white !important;
+  background: none !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* Features Grid */
@@ -232,7 +237,7 @@
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  background: linear-gradient(135deg, #fac760, #f6ae3b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
@@ -315,4 +320,10 @@
   .timeline-dot {
     left: -30px !important;
   }
+}
+
+.section-title {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
